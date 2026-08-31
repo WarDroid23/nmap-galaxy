@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-background: #090a0b;
+  --color-foreground: #e6e4df;
+  --color-card: #111315;
+  --color-card-foreground: #e6e4df;
+  --color-muted: #181b1e;
+  --color-muted-foreground: #8b8e92;
+  --color-primary: #d5d2cb;
+  --color-primary-foreground: #090a0b;
+  --color-accent: #8aa4b3;
+  --color-accent-foreground: #090a0b;
+  --color-border: #2a2d31;
+  --color-ring: #8aa4b3;
+  --color-destructive: #b08980;
+  --color-input: #1c2024;
+  --color-status-up: #7d9a8c;
+  --color-status-down: #b08980;
+  --color-status-filtered: #a09070;
+  --color-graph-internet: #9aa3ab;
+  --color-graph-gateway: #8aa4b3;
+  --color-graph-firewall: #b08980;
+  --color-graph-switch: #7a8f9a;
+  --color-graph-server: #7d9a8c;
+  --color-graph-workstation: #9a9b96;
+  --color-graph-iot: #8a8078;
+  --color-graph-cloud: #7a90a8;
+  --color-graph-edge: rgba(230, 228, 223, 0.14);
+  --color-graph-edge-active: rgba(138, 164, 179, 0.72);
+  --color-graph-edge-label: rgba(230, 228, 223, 0.48);
+  --color-graph-highlight: #c5d4dc;
+  --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-display: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --radius: 0.75rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --shadow-border: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --shadow-border-hover: 0 0 0 1px rgba(255, 255, 255, 0.14);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    height: 100%;
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
